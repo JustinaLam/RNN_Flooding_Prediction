@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import numpy as np
 import pandas as pd
 # Requires all tensorflow dependencies
@@ -190,10 +188,6 @@ def makePredictions(scope, month, day, year):
   # SUMMARIZE DATASET
   print(dataset.groupby('fld_YN').size()) # class distribution
 
-  # -------------------------------------------------------------------------------
-  # ---------------------------- COPY AND PASTE ENDS ------------------------------
-  # -------------------------------------------------------------------------------
-
   # Move Gage_height to last column, as the value we are predicting
   dataset = dataset[['datetime','fld_stg'] + [c for c in dataset if c not in ['datetime','fld_stg','fld_YN', 'Gage_height_shift']] + ['fld_YN', 'Gage_height_shift']]
 
@@ -312,8 +306,6 @@ def makePredictions(scope, month, day, year):
   fld_stgs_valid_scaled = [fld_stg_valid_scaled, (0.75 * fld_stg_valid_scaled), (0.5 * fld_stg_valid_scaled), (0.25 * fld_stg_valid_scaled)]
   stg_colors = ['r','tab:orange','y','g']
   stg_labels = ['Flood Stage','75%','50%','25%']
-
-
 
 
 
@@ -445,8 +437,6 @@ def makePredictions(scope, month, day, year):
   rmse = sqrt(mean_squared_error(inv_y, inv_yhat))
   print('Test RMSE: %.3f' % rmse)
 
-  
-
 
 
 
@@ -458,7 +448,6 @@ def makePredictions(scope, month, day, year):
   # print(inv_y)
   # print(inv_yhat)
 
-# init("30day")
 
 # if __name__ == '__main__':
 #     main()
