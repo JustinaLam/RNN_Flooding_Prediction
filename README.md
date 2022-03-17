@@ -1,6 +1,6 @@
 # RNN_Flooding_Prediction
-Recurrent Neural Network for the purpose of predicting urban flooding, particularly in Fanno Creek, OR
+LSTM Recurrent Neural Network using Tensorflow, Keras, and Sklearn, for the purpose of predicting urban flooding, particularly in Fanno Creek, OR
 
-Data from USGS database
+Uses time series data from the USGS database, including precipitation and weather information as well as measured water levels at regular time intervals.
 
-Tensorflow and its dependencies are required
+Data and results were later visualized on a web application using Flask and HTML/CSS/JavaScript.
